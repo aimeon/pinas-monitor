@@ -1,0 +1,10 @@
+[Unit]
+Description=Collect PiNAS SMART metrics hourly
+
+[Timer]
+OnCalendar=hourly
+Persistent=true
+Unit=pinas-smart.service
+
+[Install]
+WantedBy=timers.target

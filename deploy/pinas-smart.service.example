@@ -1,0 +1,7 @@
+[Unit]
+Description=Collect PiNAS SMART metrics
+
+[Service]
+Type=oneshot
+# smartctl often requires permission to read block-device health information.
+ExecStart=/usr/bin/python3 /usr/local/bin/pinas-smart.py
